@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='Css/style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Glava strani -->
+    <header>
+        <h1>Svet Grafičnih Kartic</h1>
+        <p>Vaš vodnik v svet zmogljivosti, cen in tehnologij grafičnih kartic.</p>
+    </header>
+
+    <!-- Navigacija -->
+    <nav>
+        <ul>
+            <li><a href="/">Domov</a></li>
+            <li><a href="{{ url_for('modeli') }}">Priljubljeni modeli</a></li>   
+            <li><a href="{{ url_for('tehnologije') }}">Tehnologije</a></li>
+            <li><a href="{{ url_for('zgodovina') }}">Zgodovina</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h2>Kontakt</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d608198.9808366231!2d158.59617323387454!3d53.454567666829774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x58e1bff8c88f8763%3A0x37d858c050d596d2!2sJelizovo%2C%20Kam%C4%8Datski%20kraj%2C%20Rusija!5e0!3m2!1ssl!2ssi!4v1738258894348!5m2!1ssl!2ssi"width="600" height="400" style="border: 1px solid black;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p><strong>Email:</strong> <a href="mailto:info@primer.com">info@primer.com</a></p>
+            <p><strong>Telefon:</strong> +386 1 234 5678</p>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Svet Grafičnih Kartic. Vse pravice pridržane.</p>
+    </footer>
+</body>
+</html>

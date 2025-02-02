@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='Css/style.css')}}">
+    <title>Zgodovina</title>
+</head>
+<body>
+
+    <!-- Glava strani -->
+    <header>
+        <h1>Svet Grafičnih Kartic</h1>
+        <p>Vaš vodnik v svet zmogljivosti, cen in tehnologij grafičnih kartic.</p>
+    </header>
+
+    <!-- Navigacija -->
+    <nav>
+        <ul>
+            <li><a href="/">Domov</a></li>
+            <li><a href="{{ url_for('modeli') }}">Priljubljeni modeli</a></li>   
+            <li><a href="{{ url_for('tehnologije') }}">Tehnologije</a></li>
+            <li><a href="{{ url_for('kontakt') }}">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main>
+    <section>
+        <h1 class="naslovi">Zgodovina grafičnih kartic</h1>
+        <h3>1970. leta</h3>
+        <ul>
+            <li>Arcade sistemi so uporabljali specializirane grafične kroge že od 70-ih let prejšnjega stoletja.</li>
+            <li>V zgodnjih video igrah je bila RAM pomnilnik za predpomnilnike slik zelo drag, zato so video čipi združevali podatke medtem ko je bila slika prikazana na monitorju.</li>
+            <li>Poseben krog za premikanje pomoči je omogočil CPU-ju animiranje grafike v različnih arkadnih igrah, kot so Gun Fight (1975), Sea Wolf (1976) in Space Invaders (1978).</li>
+            <li>Namco Galaxian sistem (1979) je uporabljal specializirane grafične komponente, ki podpirajo RGB barve, večbarvne sprite ter ozadja na osnovi ploščic.</li>
+        </ul>
+
+        <h3>1980. leta</h3>
+        <ul>
+            <li>NEC μPD7220A je bil prvi osebni računalnik z grafičnim procesorjem na čipu z veliko integracijo (LSI), ki je omogočil razvoj nizkocenovnih visokozmogljivih video grafičnih kartic.</li>
+            <li>V letu 1984 je Hitachi izdal ARTC HD63484, prvi večji CMOS grafični procesor za osebne računalnike.</li>
+            <li>V letu 1985 je Amiga izdala svojo lastno grafično kartico z vgrajenim blitterjem za manipulacijo bitmapov in risanje linij.</li>
+            <li>V 80-ih letih so bili predstavljeni prvi poligonalni 3D grafični sistemi v arkadnih igrah.</li>
+        </ul>
+
+        <h3>1990. leta</h3>
+        <ul>
+            <li>S3 Graphics je v letu 1991 predstavil S3 86C911, grafični čip, ki je obljubljal izboljšanje zmogljivosti v primerjavi s predhodnimi modeli.</li>
+            <li>V 90-ih letih so grafični procesorji postali vse bolj integrirani in podpirali 2D GUI pospeševanje, medtem ko so API-ji kot so WinG in DirectDraw omogočili hitro risanje 2D grafik v operacijskih sistemih.</li>
+            <li>V začetku in sredini 90-ih let so se začeli pojavljati prvi primeri realnočasovnih 3D grafičnih kartic, kot so Sega Model 1 in PlayStation konzola.</li>
+            <li>V 1994 je Sony predstavil svojo 32-bitno grafično enoto (GPU) v PlayStationu.</li>
+        </ul>
+
+        <h3>2000. leta</h3>
+        <ul>
+            <li>V letu 2002 je ATI predstavil Radeon 9700, prvi Direct3D 9.0 pospeševalnik, ki je omogočil implementacijo zank in obsežnih plavajočih točk za pixel in vertex shadere.</li>
+            <li>GeForce 3 je bil prvi čip, ki je omogočal programabilno senčenje in je uporabljal senčilce za procesiranje vsakega piksla.</li>
+            <li>V 2000-ih so grafični procesorji začeli postajati splošni računalniški procesorji, ki so se uporabljali za splošno računalniške naloge kot je učenje z globokimi nevralnimi mrežami.</li>
+        </ul>
+
+        <h3>2010. leta</h3>
+        <ul>
+            <li>V letu 2010 je Nvidia sodelovala z Audijem, da bi poganjala zaslone v avtomobilih s pomočjo GPU Tegra za izboljšanje funkcionalnosti navigacijskih in zabavnih sistemov.</li>
+            <li>V letu 2013 sta bila izšla PlayStation 4 in Xbox One, ki sta uporabljala AMD Radeon HD 7850 in 7790 GPU-je.</li>
+            <li>V 2018 je Nvidia predstavila serijo RTX 20, ki so dodali jedra za sledenje žarkov za izboljšanje svetlobnih učinkov v grafiki.</li>
+        </ul>
+
+    <p>Danes so grafične kartice nepogrešljive tako v igrah kot v profesionalnih aplikacijah, kot sta obdelava videa in znanstveno računanje.</p>
+    <div class="zgodovina">
+        <img src="{{url_for('static',filename='Images/VisionTek_GeForce_256.jpg')}}" alt="prva oblika grafične gartice">
+        <h4>Prva oblika grafične kartice: "GeForce 256"</h4>
+        <p>GeForce 256 je izvirna izdaja v Nvidia "GeForce" proizvodni liniji. Napovedan je bil 31. avgusta 1999 in izdan 11. oktobra 1999. GeForce 256 izboljša svojega predhodnika (RIVA TNT2) z večjim številom fiksnih pipelinov za piksle, prenosom izračunov geometrije gostitelja na strojno enoto za transformacijo in osvetlitev (T&L) ter dodajanjem strojne kompenzacije gibanja za MPEG-2 video. Ponuja pomemben skok v zmogljivosti 3D iger za osebne računalnike in je bil prvi popolnoma Direct3D 7 skladni 3D pospeševalnik.</p>
+    </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Svet Grafičnih Kartic. Vse pravice pridržane.</p>
+    </footer>
+
+    </section>
+</body>
+</html>

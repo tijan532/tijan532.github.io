@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svet Grafičnih Kartic</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='Css/style.css')}}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body onload="getHistory()">
+    <!-- Glava strani -->
+    <header>
+        <h1>Svet Grafičnih Kartic</h1>
+        <p>Vaš vodnik v svet zmogljivosti, cen in tehnologij grafičnih kartic.</p>
+    </header>
+
+    <!-- Navigacija -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('modeli') }}">Priljubljeni modeli</a></li>
+            <li><a href="{{ url_for('tehnologije') }}">Tehnologije</a></li>
+            <li><a href="{{ url_for('zgodovina') }}">Zgodovina</a></li>
+            <li><a href="{{ url_for('kontakt') }}">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- Glavni vsebinski del -->
+    <main>
+        <section>
+            <h2>Dobrodošli na naši strani</h2>
+            <p>Naša spletna stran vam ponuja poglobljen vpogled v svet grafičnih kartic. Ne glede na to, ali ste navdušenec nad tehnologijo ali le iščete pomoč pri nakupu, ste na pravem mestu. Tukaj boste našli informacije o:
+            </p>
+            <ul>
+                <li>Priljubljenih modelih in njihovih specifikacijah.</li>
+                <li>Naprednih tehnologijah, kot sta G-Sync in Ray Tracing.</li>
+                <li>Zgodovini in razvoju grafičnih kartic.</li>
+            </ul>
+            <p>Raziskujte svet grafike z nami!</p>
+        </section>
+
+        <section>
+            <h2>Splošen uvod v grafične kartice</h2>
+            <p>Grafične kartice so ključni del strojne opreme, ki omogoča prikaz slik na vašem zaslonu. Od svoje uvedbe so postale nepogrešljiv del računalniške tehnologije, saj ne podpirajo le igranja iger, temveč tudi zahtevne naloge, kot so urejanje videoposnetkov, 3D modeliranje in poganjanje umetne inteligence.</p>
+            <p>V zgodovini računalništva so grafične kartice doživele izjemen razvoj. Od preprostih dvodimenzionalnih prikazovalnikov so postale zmogljive enote za obdelavo kompleksnih grafičnih podatkov v realnem času. Njihove osnovne funkcije vključujejo:
+            </p>
+            <ul>
+                <li>Upodabljanje slik in grafike na zaslonu.</li>
+                <li>Podpiranje zahtevnih grafičnih procesov, kot so Ray Tracing in VR.</li>
+                <li>Zagotavljanje gladkega delovanja pri igranju iger in uporabi grafično intenzivnih aplikacij.</li>
+            </ul>
+            <p>Razumevanje delovanja grafičnih kartic je ključno za pravilno izbiro in uporabo. Več o tem si lahko preberete v naših vodnikih.</p>
+
+            <div id="history_content"></div>
+        </section>
+    </main>
+
+    <!-- Noga strani -->
+    <footer>
+        <p>&copy; 2024 Svet Grafičnih Kartic. Vse pravice pridržane.</p>
+    </footer>
+    <script>
+        function getHistory(){
+          let history_content = document.getElementById("history_content");
+    
+    
+          $.ajax({
+            url: "/getHistory",
+            success: function(result) {
+                history_content.innerHTML = result.history_content;
+            }
+          });
+        }
+      </script>
+</body>
+</html>

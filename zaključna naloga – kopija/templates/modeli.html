@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Popularne modeli grafičnih kartic</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='Css/style.css')}}">
+    </head>
+    <body>   <!-- Glava strani -->
+        <header>
+            <h1>Svet Grafičnih Kartic</h1>
+            <p>Vaš vodnik v svet zmogljivosti, cen in tehnologij grafičnih kartic.</p>
+        </header>
+    
+        <!-- Navigacija -->
+        <nav>
+            <ul>
+                <li><a href="/">Domov</a></li>
+                <li><a href="{{ url_for('tehnologije') }}">Tehnologije</a></li>
+                <li><a href="{{ url_for('zgodovina') }}">Zgodovina</a></li>
+                <li><a href="{{ url_for('kontakt') }}">Kontakt</a></li>
+            </ul>
+        </nav>
+    
+        <main>
+            <div class="container">
+                <h2>Nekaj priljubljenih modelov</h1>
+                <p>Če hoćete izvedeti več o modeluh in njihovih specifikacijah, kliknite na sliko</p>
+            </div>
+            
+
+            <div class="galerija">
+                <a href="{{ url_for('N07') }}" target="_blank">
+                    <img src="{{url_for('static',filename='Images/1_Nvidia GeForce RTX 4070 Super.jpg')}}" alt="1 Nevidia GeForce 256">
+                </a>    
+                <ul>
+                    <li>Napredna NVIDIA Ada Lovelace arhitektura
+                    <li> Visoko zmogljiv GeForce RTX™ 4070 SUPER grafični procesor
+                    <li>Integriran 12 GB GDDR6X 192-bit pomnilnik
+                    <li>Umetna inteligenca, pospešena zmogljivost z NVIDIA DLSS 3
+                    <li>Izboljšana zmogljivost, energetska učinkovitost in večja zmogljivost sledenja žarkom
+                    <li>Vrhunski termalni Windforce dizajn za odvajanje toplote
+                    <li>Zaščitna hrbtna plošča
+                    <li> RGB Fusion osvetlitev</li>
+                </ul>
+                <h2>Nvidia GeForce RTX 4070 Super</h2>
+            </div>
+
+            <div class="galerija">
+                <a href="{{ url_for('AMD_XTX') }}" target="_blank">
+                    <img src="{{url_for('static',filename='Images/2. AMD Radeon RX 7900 XTX.jpg')}}" alt="2. AMD Radeon RX 7900 XTX">
+                </a>
+                <ul>
+                    <li>Preverjena kakovost Sapphire</li>
+                    <li>Arhitektura RDNA 3</li>
+                    <li>24 GB pomnilnika GDDR6</li>
+                    <li>Predpomnilnik AMD Infinity Cache</li>
+                    <li>2. generacija pospeševalnikov za Raytracing</li>
+                    <li>Posebni ventilatorji z višjim zračnim tlakom</li>
+                </ul>
+                <h2>AMD Radeon RX 7900 XTX</h2>
+            </div>
+            <div class="galerija">
+                <a href="{{ url_for('AMD_GRE') }}" target="_blank">
+                    <img src="{{url_for('static',filename='Images/2. AMD Radeon RX 7900 GRE.png')}}" alt="3. AMD Radeon RX 7900 GRE">
+                </a>
+                <ul>
+                    <li>Znamka grafične kartice: AMD</li>	
+                    <li>Model Grafične Kartice: RX 7900 GRE</li>
+                    <li>Velikost Grafičnega Spomina: 16 GB</li>
+                    <li>Izhodi: 2x DisplayPort, HDMI</li>
+                    <li>Napajanje: 2x 8pin PCIe</li>
+                    <li>Garancija: 24 mesecev</li>
+                </ul>                    
+                <h2>AMD Radeon RX 7900 GRE</h2>
+            </div>
+            
+            <div class="galerija">
+                <a href="{{ url_for('N09') }}" target="_blank">
+                    <img src="{{url_for('static',filename='Images/4. Nvidia GeForce RTX 4090.jpg')}}" alt="4. Nvidia GeForce RTX 4090">
+                </a>
+                <ul>
+                    <li>Napredna NVIDIA Ada Lovelace arhitektura</li>
+                    <li>Visoko zmogljiv GeForce RTX™ 4090 grafični procesor</li>
+                    <li>Integriran 24 GB GDDR6X 384-bit pomnilnik</li>
+                    <li>Umetna inteligenca, pospešena zmogljivost z NVIDIA DLSS 3</li>
+                    <li>Izboljšana zmogljivost, energetska učinkovitost in večja zmogljivost sledenja žarkom</li>
+                    <li>Vrhunski termalni dizajn za odvajanje toplote</li>
+                    <li>Zaščitna hrbtna plošča</li>
+                </ul>
+                <h2>Nvidia GeForce RTX 4090</h2>
+            </div>
+            <div class="galerija">
+                <a href="{{ url_for('N06') }}" target="_blank">
+                    <img src="{{url_for('static',filename='Images/Nvidia GeForce RTX 4060.jpg')}}" alt="Nvidia GeForce RTX 4060">
+                </a>
+                
+                <ul>
+                    <li>Znamka grafične kartice: Nvidia</li>
+                    <li>Model Grafične Kartice:RTX 4060 Ti</li>
+
+                    <li>Velikost Grafičnega Spomina: 8 GB</li>
+
+                    <li>Izhodi: 2x DisplayPort, 2x HDMI</li>
+
+                    <li>Napajanje: 1x 8pin PCIe</li>
+
+                    <li>Garancija: 24 mesecev</li>
+                </ul>
+                <h2>Nvidia GeForce RTX 4060</h2>
+            </div>
+            
+        </main>
+        <footer>
+            <p>&copy; 2024 Svet Grafičnih Kartic. Vse pravice pridržane.</p>
+        </footer>
+    </body>
+</html>

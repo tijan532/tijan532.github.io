@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='Css/style.css')}}">
+    <title>Tehnologije v grafičnih karticah</title>
+</head>
+<body>
+    <header>
+        <h1>Svet Grafičnih Kartic</h1>
+        <p>Vaš vodnik v svet zmogljivosti, cen in tehnologij grafičnih kartic.</p>
+    </header>
+
+    <!-- Navigacija -->
+    <nav>
+        <ul>
+            <li><a href="/">Domov</a></li>
+            <li><a href="{{ url_for('modeli') }}">Priljubljeni modeli</a></li>      
+            <li><a href="{{ url_for('zgodovina') }}">Zgodovina</a></li>
+            <li><a href="{{ url_for('kontakt') }}">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h1 class="naslovi">Tehnologije v grafičnih karticah</h1>
+        <div class="sync">
+            <h2>G-Sync: Tehnologija prilagodljive sinhronizacije</h2>
+            <p><strong>G-Sync</strong> je lastniška tehnologija prilagodljive sinhronizacije, ki jo je razvila Nvidia, z glavnim ciljem odpravljanja trganja slike in potrebe po programski rešitvi, kot je Vsync. G-Sync odpravi trganje slike tako, da omogoči prilagajanje osveževalne frekvence video zaslona frekvenci sličic izhodne naprave (grafična kartica/integrirana grafika), namesto da bi se izhodna naprava prilagodila zaslonu. Tradicionalno bi se zaslon lahko osvežil sredi procesa izhodne sličice, kar bi povzročilo trganje slike ali prikaz dveh ali več sličic naenkrat.</p>
+            <p>Za uporabo G-Sync mora naprava vsebovati lastniški G-Sync modul, ki ga prodaja Nvidia. Podobno tehnologijo za zaslone je izdal tudi AMD, imenovano FreeSync, ki opravlja enako funkcijo kot G-Sync, vendar je brezplačna.</p>
+            
+            <h3>Tehnične lastnosti</h3>
+            <p>Nvidia je razvila posebno funkcijo za preprečevanje trkov, ki preprečuje težave, ko je nova sličica pripravljena, medtem ko se na zaslonu že riše podvojena. Ta funkcija napove osvežitev in počaka, da je naslednja sličica dokončana. Poleg tega prekomerno poganjanje pikslov postane težavno v scenariju brez fiksnega osveževanja, zato so potrebne rešitve za napovedovanje osvežitve in prilagoditev vrednosti prekomernega poganjanja.</p>
+        
+            <h3>Strojna oprema</h3>
+            <p>Modul G-Sync nosi vse potrebne funkcionalne dele in je zgrajen okoli FPGA iz družine Altera Arria V GX, ki vsebuje 156.000 logičnih elementov, 396 DSP blokov in 67 LVDS kanalov. Povezan je s tremi DDR3L DRAM čipi za dosego potrebne širine pasu, s skupno kapaciteto 768 MB.</p>
+        
+            <h3>Podprti GPU-ji</h3>
+            <ul>
+                <li>Nvidia GeForce GTX 650 Ti Boost GPU ali višje (G-Sync, G-Sync Ultimate)</li>
+                <li>GeForce serija 10 (Pascal) in višje (G-Sync združljiv)</li>
+            </ul>
+        
+            <h3>Operacijski sistemi in zahteve</h3>
+            <ul>
+                <li>Windows 7, 8, 8.1, 10 in 11</li>
+                <li>Linux, FreeBSD, Solaris</li>
+                <li>DisplayPort 1.2 neposredno iz GPU</li>
+            </ul>
+        
+            <h3>Kritike</h3>
+            <p>G-Sync se sooča s kritiko zaradi svoje lastniške narave, saj so na voljo brezplačne alternative, kot je standard VESA Adaptive-Sync. G-Sync potrebuje poseben modul, ki ga izdeluje Nvidia, medtem ko FreeSync temelji na neobveznem komponentu DisplayPort 1.2a. Kritiziran je tudi zaradi porabe energije, ko je monitor izključen, saj G-Sync monitorji porabijo približno 14W, ko so izklopljeni, medtem ko primerljivi monitorji brez G-Sync modula porabijo 0W.</p>
+        </div>
+
+
+        <div class="sync">
+
+            <h2>FreeSync: AMD-jeva tehnologija prilagodljive sinhronizacije</h2>
+        <p><strong>FreeSync</strong> je odprt standard prilagodljive sinhronizacije, ki ga je razvilo podjetje AMD z namenom odpravljanja trganja slike (screen tearing) in zatikanja (stuttering). FreeSync omogoča, da se osveževalna frekvenca monitorja dinamično prilagaja frekvenci sličic, ki jih generira grafična kartica, kar izboljša gladkost slike in zmanjša zakasnitve pri prikazu.</p>
+        <p>V nasprotju z <strong>Nvidia G-Sync</strong>, ki zahteva poseben strojni modul, <strong>FreeSync temelji na standardu VESA Adaptive-Sync</strong>, ki je del <strong>DisplayPort 1.2a</strong> in ne potrebuje dodatne strojne opreme. To pomeni, da je FreeSync podprt na širšem naboru monitorjev in je pogosto cenejša alternativa G-Syncu.</p>
+
+        <h3>Tehnične lastnosti</h3>
+        <p>AMD FreeSync uporablja <strong>Variable Refresh Rate (VRR)</strong> za sinhronizacijo osveževalne frekvence monitorja s FPS iz grafične kartice, kar preprečuje trganje slike.</p>
+        <p>Za razliko od G-Sync, ki uporablja lastniški Nvidia modul, <strong>FreeSync deluje s standardnimi kontrolnimi vezji monitorjev</strong>, kar proizvajalcem omogoča večjo fleksibilnost pri implementaciji tehnologije.</p>
+        <p>FreeSync deluje prek <strong>DisplayPorta</strong> in novejših <strong>HDMI različic</strong> (od HDMI 2.1 naprej), kar omogoča večjo združljivost z različnimi napravami.</p>
+
+        <h3>Strojna oprema</h3>
+        <p>Ker FreeSync ne zahteva posebnega modula, je podprt na številnih monitorjih različnih cenovnih razredov.</p>
+        <p>Obstajajo tri različice FreeSync:</p>
+        <ul>
+            <li><strong>FreeSync</strong> – osnovna različica za odpravljanje trganja slike pri standardnih monitorjih.</li>
+            <li><strong>FreeSync Premium</strong> – dodaja <strong>Low Framerate Compensation (LFC)</strong> za boljše delovanje pri nizkih FPS.</li>
+            <li><strong>FreeSync Premium Pro</strong> – podpira <strong>HDR (High Dynamic Range)</strong> in omogoča še boljšo kakovost slike.</li>
+        </ul>
+
+        <h3>Podprti GPU-ji</h3>
+        <ul>
+            <li>AMD Radeon serije RX 200 in novejše</li>
+            <li>AMD Ryzen APU-ji z integrirano grafiko</li>
+        </ul>
+        <p>Nvidia je kasneje omogočila podporo <strong>FreeSync na GeForce karticah</strong> (GTX 10 serija in novejše) pod oznako <strong>G-Sync Compatible</strong>, čeprav delovanje ni vedno enako zanesljivo kot pri AMD karticah.</p>
+
+        <h3>Operacijski sistemi in zahteve</h3>
+        <ul>
+            <li>Windows 10 in 11</li>
+            <li>Linux</li>
+            <li>Podpora na konzolah (Xbox Series X/S, nekatere PlayStation konzole)</li>
+            <li>Monitor s FreeSync podporo</li>
+            <li>Grafična kartica AMD Radeon ali Nvidia GeForce (G-Sync Compatible)</li>
+            <li>DisplayPort 1.2a ali HDMI 2.1 povezava</li>
+        </ul>
+
+        <h3>Kritike</h3>
+        <p>Čeprav je FreeSync brezplačna alternativa G-Syncu, se pogosto omenja nekaj pomanjkljivosti:</p>
+        <ul>
+            <li><strong>Neenotna kakovost monitorjev</strong> – ker ne zahteva posebnega modula, je kakovost FreeSync implementacije odvisna od proizvajalca monitorja. Nekateri monitorji imajo boljše FreeSync delovanje kot drugi.</li>
+            <li><strong>Ghosting in blur</strong> – na nekaterih monitorjih se lahko pojavijo učinki "ghostinga" (sledi premikajočih se objektov).</li>
+            <li><strong>Slabša podpora na Nvidia GPU-jih</strong> – G-Sync Compatible FreeSync monitorji ne delujejo vedno enako dobro kot pravi G-Sync monitorji.</li>
+        </ul>
+
+        <p>Kljub tem kritikam ostaja FreeSync <strong>najbolj dostopna tehnologija prilagodljive sinhronizacije</strong>, ki jo podpira širok nabor monitorjev in grafičnih kartic.</p>
+
+        <p><strong>Zaključek:</strong> Če želiš odpravo trganja slike brez dodatnih stroškov za G-Sync modul, je <strong>FreeSync odlična izbira</strong>. Če uporabljaš AMD grafično kartico ali FreeSync monitor, lahko uživaš v tekoči sliki brez dodatnega input laga.</p>
+    </div>
+
+
+
+    <div class="sync"><h2>V-Sync: Klasična tehnologija sinhronizacije sličic</h2>
+        <p><strong>V-Sync</strong> (Vertical Synchronization) je tehnologija sinhronizacije, ki omogoča usklajevanje frekvence osveževanja monitorja s hitrostjo prikazovanja sličic (FPS) grafične kartice. Glavni namen V-Sync je odpravljanje trganja slike (<em>screen tearing</em>), ki se pojavi, ko se med osveževanjem monitorja prikažeta dve ali več različnih sličic hkrati.</p>
+        <p>V-Sync deluje tako, da grafična kartica čaka na zaključek osveževanja zaslona, preden pošlje naslednjo sličico. S tem preprečuje, da bi se del ene sličice prikazal na zgornji polovici zaslona, medtem ko bi se nova sličica že upodabljala na spodnji polovici.</p>
+        
+        <h3>Tehnične lastnosti</h3>
+        <p>Glavna funkcija V-Sync je sinhronizacija izhodne hitrosti sličic z osveževalno frekvenco monitorja, kar preprečuje vizualne artefakte, ki nastanejo pri neskladju obeh hitrosti. Kljub temu pa ima V-Sync tudi nekatere pomanjkljivosti:</p>
+        <ul>
+            <li><strong>Input lag</strong> – ker mora grafična kartica čakati na monitor, lahko pride do zamika pri zaznavanju vnosa (npr. pri igranju iger).</li>
+            <li><strong>Zmanjšanje FPS</strong> – če FPS pade pod osveževalno frekvenco monitorja, se lahko prepolovi (npr. če je monitor 60 Hz, bo FPS padel na 30 namesto na 59).</li>
+            <li><strong>Stuttering</strong> – kadar FPS ni konstanten, lahko V-Sync povzroči zatikanje slike.</li>
+        </ul>
+        
+        <h3>Izboljšane različice V-Sync</h3>
+        <p>Zaradi omejitev klasičnega V-Synca so bile razvite izboljšane tehnologije:</p>
+        <ul>
+            <li><strong>Adaptive V-Sync</strong> – Nvidia tehnologija, ki samodejno izklopi V-Sync, ko FPS pade pod osveževalno frekvenco, s čimer se zmanjša zatikanje.</li>
+            <li><strong>Fast Sync</strong> – prav tako Nvidia rešitev, ki omogoča, da se prikazuje samo zadnja renderirana sličica, kar zmanjšuje input lag.</li>
+            <li><strong>Enhanced Sync</strong> – AMD alternativa Fast Sync, ki deluje podobno in zmanjšuje učinke input laga in stutteringa.</li>
+        </ul>
+        
+        <h3>Podprti GPU-ji</h3>
+        <ul>
+            <li>V-Sync je podprt na vseh modernejših grafičnih karticah Nvidia in AMD.</li>
+            <li>Podprt je tudi na integriranih grafičnih procesorjih (Intel HD Graphics, AMD APU-ji).</li>
+        </ul>
+        
+        <h3>Operacijski sistemi in zahteve</h3>
+        <ul>
+            <li>Windows 7, 8, 10, 11</li>
+            <li>Linux in MacOS</li>
+            <li>Monitor s fiksno osveževalno frekvenco (npr. 60 Hz, 120 Hz)</li>
+        </ul>
+        
+        <h3>Kritike</h3>
+        <p>Čeprav V-Sync učinkovito odpravi trganje slike, ima nekaj pomembnih pomanjkljivosti:</p>
+        <ul>
+            <li><strong>Visok input lag</strong> – zaradi čakanja na osvežitev zaslona lahko pride do občutnega zamika pri zaznavanju ukazov (nezaželeno pri hitrih igrah, kot so FPS in dirkalne igre).</li>
+            <li><strong>Stuttering pri nizkem FPS</strong> – če FPS pade pod osveževalno frekvenco monitorja, lahko pride do zatikanja in neprijetne igralne izkušnje.</li>
+            <li><strong>Ni fleksibilen</strong> – deluje le pri fiksnih osveževalnih frekvencah in ne omogoča prilagodljivosti, kot jo ponujajo FreeSync in G-Sync.</li>
+        </ul>
+        
+        <p><strong>Zaključek:</strong> V-Sync je osnovna tehnologija sinhronizacije, ki lahko odpravi trganje slike, vendar s seboj prinaša input lag in stuttering. Čeprav je še vedno prisoten kot možnost v večini iger in gonilnikov, so sodobne alternative, kot sta FreeSync in G-Sync, boljša izbira za večino uporabnikov.</p>
+        </div>
+
+
+    </section>
+    <footer>
+        <p>&copy; 2024 Svet Grafičnih Kartic. Vse pravice pridržane.</p>
+    </footer>
+    
+</body>
+</html>
